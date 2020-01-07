@@ -13,6 +13,10 @@ define('PUBLIC_DIR', __DIR__ . '/../public/');
  * Ce tableau met en relation des routes avec des méthodes de controller
  */
 $routes = [
+    '/' => [
+        'GET' => 'App\Controller\ReportCreatorController@show',
+        'POST' => 'App\Controller\ReportCreatorController@execute'
+    ],
     '/report-creator' => [
         'GET' => 'App\Controller\ReportCreatorController@show',
         'POST' => 'App\Controller\ReportCreatorController@execute'
