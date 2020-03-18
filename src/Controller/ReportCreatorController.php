@@ -26,7 +26,7 @@ class ReportCreatorController
         $report = new Report($date, $title, $data);
 
         $csvFormatter = new CsvFormatter();
-        dd($csvFormatter->formatToCsv($report));
+
 
         if ($format === "html") {
             $formatter = new HtmlFormatter();

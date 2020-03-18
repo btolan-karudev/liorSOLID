@@ -14,7 +14,6 @@ class CsvFormatter
 
         $data = implode(";", $contents['data']);
 
-        dd($data);
 
         return implode(";", $contents);
     }
