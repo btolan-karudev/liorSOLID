@@ -6,7 +6,7 @@ namespace App\Reporting\Format;
 
 use App\Reporting\Report;
 
-class CsvFormatter implements FormatterInterface
+class CsvFormatter implements FormatterInterface, DeserializerInterface
 {
     public function format(Report $report): string
     {

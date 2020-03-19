@@ -32,11 +32,4 @@ class HtmlFormatter implements FormatterInterface
             </ul>
         ";
     }
-
-    public function deserialize(string $str): Report
-    {
-        throw new Exception('Imposible de deserialize de HTML.');
-
-        return new Report("", "", []);
-    }
 }

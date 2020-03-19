@@ -16,5 +16,4 @@ class HtmlSpecialFormatter extends HtmlFormatter
         <div style="background-color: chartreuse">' . $html . '</div>
         ';
     }
-
 }
