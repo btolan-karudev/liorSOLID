@@ -27,7 +27,7 @@ class Report
      */
     public function __construct(string $date, string $title, array $data)
     {
-        $this->date  = $date;
+        $this->date = $date;
         $this->title = $title;
         $this->data = $data;
     }
@@ -36,10 +36,10 @@ class Report
      * Retourne un tableau associatif contenant la date et le titre du rapport
      * Indice : tiens tiens, on pourrait donc récupérer ces données depuis l'extérieur ?
      */
-    public function getContents()
+    public function getContents(): array
     {
         return [
-            'date'  => $this->date,
+            'date' => $this->date,
             'title' => $this->title,
             'data' => $this->data
         ];
