@@ -14,7 +14,9 @@ class CsvFormatter implements FormatterInterface, DeserializerInterface
 
         $data = implode(";", $contents['data']);
 
-        return implode(";", $contents);
+        unset($contents['data']);
+
+        return implode(";", $contents) . ";" . $data;
     }
 
     public function deserialize(string $str): Report

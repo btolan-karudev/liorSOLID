@@ -19,10 +19,10 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/report-creator">Créer un rapport</a>
+                    <a class="nav-link" href="index.php/report-creator">Créer un rapport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/bulk-report">Rapport en masse</a>
+                    <a class="nav-link" href="index.php/bulk-report">Rapport en masse</a>
                 </li>
             </ul>
         </div>
