@@ -6,16 +6,27 @@ namespace App\Reporting\Format;
 
 use App\Reporting\Report;
 
-class CsvFormatter
+class CsvFormatter implements FormatterInterface
 {
-    public function formatToCsv(Report $report)
+    public function format(Report $report): string
     {
         $contents = $report->getContents();
 
         $data = implode(";", $contents['data']);
 
-
         return implode(";", $contents);
     }
 
+    public function deserialize(string $str): Report
+    {
+        // "titre;date;5;6"
+        $contents = explode(";", $str);
+        // ["titre"; "date", 5, 6]
+        $data = [
+            $contents[2],
+            $contents[3]
+        ];
+
+        return new Report($contents[1], $contents[0], $data);
+    }
 }
